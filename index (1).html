@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Какой у тебя тип фигуры</title>
+<meta name="description" content="Пять типов фигуры с силуэтами и подсказками, что работает на каждый.">
+<meta property="og:title" content="Какой у тебя тип фигуры">
+<meta property="og:description" content="Пять типов фигуры и что работает на каждый силуэт.">
+<meta property="og:type" content="article">
+<style>
+html{-webkit-text-size-adjust:100%}
+body{margin:0}
+img,svg{max-width:100%}
+</style>
+<style>
+/* Layout: узкая мобильная лента; силуэт слева, пояснение справа — пара держится на всех ширинах */
+:root{
+  --paper:#F6F5F7;
+  --surface:#FFFFFF;
+  --ink:#1B1620;
+  --muted:#6E6673;
+  --line:#E3DFE7;
+  --accent:#7A2E52;
+  --accent-soft:#F4E9EF;
+
+  --display: Georgia, 'Times New Roman', 'PT Serif', serif;
+  --body: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#141118; --surface:#1D1922; --ink:#EDE9F0; --muted:#A69EAE;
+    --line:#2F2937; --accent:#E7A3C1; --accent-soft:#2B1C25;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#141118; --surface:#1D1922; --ink:#EDE9F0; --muted:#A69EAE;
+  --line:#2F2937; --accent:#E7A3C1; --accent-soft:#2B1C25;
+  color-scheme: dark;
+}
+
+*{box-sizing:border-box}
+body{
+  background:var(--paper); color:var(--ink);
+  font-family:var(--body); font-size:16px; line-height:1.58;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:560px; margin:0 auto; padding-inline:18px; padding-block:32px 48px}
+
+h1{
+  font-family:var(--display); font-size:clamp(28px,7.5vw,36px);
+  font-weight:600; line-height:1.12; margin:0 0 12px; text-wrap:balance;
+}
+.sub{color:var(--muted); font-size:15px; margin:0 0 20px}
+
+.figs{display:grid; gap:10px}
+.fig{
+  display:grid; grid-template-columns:72px 1fr; gap:16px; align-items:center;
+  background:var(--surface); border:1px solid var(--line); border-radius:10px; padding:14px 16px;
+}
+.fig svg{display:block; width:72px; height:auto; fill:var(--ink)}
+.fig div{min-width:0}
+.fig h2{margin:0 0 3px; font-size:16px; font-weight:600; font-family:var(--body)}
+.fig p{margin:0 0 6px; font-size:13.5px; color:var(--muted)}
+.fig .tip{font-size:13.5px; margin:0; color:var(--ink)}
+.fig .tip b{color:var(--accent); font-weight:600}
+
+.note{
+  border-left:2px solid var(--accent); background:var(--accent-soft);
+  padding:12px 15px; border-radius:0 8px 8px 0; font-size:14.5px; margin:18px 0 0;
+}
+.note p{margin:0}
+</style>
+
+</head>
+<body>
+<div class="wrap">
+
+  <h1>Какой у тебя тип фигуры</h1>
+  <p class="sub">Встань перед зеркалом и сравни три линии: плечи, талию и бёдра. Важно не то, какие они, а как соотносятся между собой.</p>
+
+  <div class="figs">
+
+    <div class="fig">
+      <svg viewBox="0 0 100 195" role="img" aria-label="Силуэт: узкие плечи, широкие бёдра">
+        <circle cx="50" cy="19" r="10.5"/>
+        <path d="M 35,40 C 34,56 35,62 36,74 C 36,86 22,92 22,104 C 22,112 24,115 26,117 L 74,117 C 76,115 78,112 78,104 C 78,92 64,86 64,74 C 65,62 66,56 65,40 C 62,36 54,34 54,30 L 46,30 C 46,34 38,36 35,40 Z"/>
+        <path d="M 26,117 C 25,142 41,160 40,183 L 47.5,183 C 47.5,160 48.5,142 48.5,117 Z"/>
+        <path d="M 74,117 C 75,142 59,160 60,183 L 52.5,183 C 52.5,160 51.5,142 51.5,117 Z"/>
+      </svg>
+      <div>
+        <h2>Треугольник</h2>
+        <p>Бёдра заметно шире плеч, талия выражена.</p>
+        <p class="tip"><b>Работает:</b> акценты сверху — яркий верх, структурные плечи, V-вырез. Низ простой и тёмный.</p>
+      </div>
+    </div>
+
+    <div class="fig">
+      <svg viewBox="0 0 100 195" role="img" aria-label="Силуэт: широкие плечи, узкие бёдра">
+        <circle cx="50" cy="19" r="10.5"/>
+        <path d="M 22,40 C 21,56 33,62 34,74 C 34,86 34,92 34,104 C 34,112 36,115 38,117 L 62,117 C 64,115 66,112 66,104 C 66,92 66,86 66,74 C 67,62 79,56 78,40 C 75,36 54,34 54,30 L 46,30 C 46,34 25,36 22,40 Z"/>
+        <path d="M 38,117 C 37,142 41,160 40,183 L 47.5,183 C 47.5,160 48.5,142 48.5,117 Z"/>
+        <path d="M 62,117 C 63,142 59,160 60,183 L 52.5,183 C 52.5,160 51.5,142 51.5,117 Z"/>
+      </svg>
+      <div>
+        <h2>Перевёрнутый треугольник</h2>
+        <p>Плечи шире бёдер, силуэт сужается книзу.</p>
+        <p class="tip"><b>Работает:</b> объём снизу — широкие брюки, юбка с запа́хом, А-силуэт. Верх спокойный.</p>
+      </div>
+    </div>
+
+    <div class="fig">
+      <svg viewBox="0 0 100 195" role="img" aria-label="Силуэт: прямые линии, талия не выражена">
+        <circle cx="50" cy="19" r="10.5"/>
+        <path d="M 29,40 C 28,56 29,62 30,74 C 30,86 29,92 29,104 C 29,112 31,115 33,117 L 67,117 C 69,115 71,112 71,104 C 71,92 70,86 70,74 C 71,62 72,56 71,40 C 68,36 54,34 54,30 L 46,30 C 46,34 32,36 29,40 Z"/>
+        <path d="M 33,117 C 32,142 41,160 40,183 L 47.5,183 C 47.5,160 48.5,142 48.5,117 Z"/>
+        <path d="M 67,117 C 68,142 59,160 60,183 L 52.5,183 C 52.5,160 51.5,142 51.5,117 Z"/>
+      </svg>
+      <div>
+        <h2>Прямоугольник</h2>
+        <p>Плечи и бёдра примерно равны, талия почти не выделяется.</p>
+        <p class="tip"><b>Работает:</b> создавать талию — ремень, заправленный верх, пояс на пальто, слои.</p>
+      </div>
+    </div>
+
+    <div class="fig">
+      <svg viewBox="0 0 100 195" role="img" aria-label="Силуэт: плечи и бёдра равны, узкая талия">
+        <circle cx="50" cy="19" r="10.5"/>
+        <path d="M 25,40 C 24,56 37,62 38,74 C 38,86 25,92 25,104 C 25,112 27,115 29,117 L 71,117 C 73,115 75,112 75,104 C 75,92 62,86 62,74 C 63,62 76,56 75,40 C 72,36 54,34 54,30 L 46,30 C 46,34 28,36 25,40 Z"/>
+        <path d="M 29,117 C 28,142 41,160 40,183 L 47.5,183 C 47.5,160 48.5,142 48.5,117 Z"/>
+        <path d="M 71,117 C 72,142 59,160 60,183 L 52.5,183 C 52.5,160 51.5,142 51.5,117 Z"/>
+      </svg>
+      <div>
+        <h2>Песочные часы</h2>
+        <p>Плечи и бёдра сбалансированы, талия чётко выражена.</p>
+        <p class="tip"><b>Работает:</b> подчёркивать талию — приталенный крой, высокая посадка, облегающий силуэт.</p>
+      </div>
+    </div>
+
+    <div class="fig">
+      <svg viewBox="0 0 100 195" role="img" aria-label="Силуэт: объём в центре, мягкие линии">
+        <circle cx="50" cy="19" r="10.5"/>
+        <path d="M 31,40 C 30,56 24,62 25,74 C 25,86 30,92 30,104 C 30,112 32,115 34,117 L 66,117 C 68,115 70,112 70,104 C 70,92 75,86 75,74 C 76,62 70,56 69,40 C 66,36 54,34 54,30 L 46,30 C 46,34 34,36 31,40 Z"/>
+        <path d="M 34,117 C 33,142 41,160 40,183 L 47.5,183 C 47.5,160 48.5,142 48.5,117 Z"/>
+        <path d="M 66,117 C 67,142 59,160 60,183 L 52.5,183 C 52.5,160 51.5,142 51.5,117 Z"/>
+      </svg>
+      <div>
+        <h2>Круг / Овал</h2>
+        <p>Объём в центре, линии мягкие и округлые.</p>
+        <p class="tip"><b>Работает:</b> вертикали — длинный жакет нараспашку, V-вырез, прямые струящиеся силуэты.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="note"><p>Сомневаешься между двумя — выбери любой и посмотри на образы. Тип меняется в настройках за два тапа.</p></div>
+
+</div>
+
+</body>
+</html>
